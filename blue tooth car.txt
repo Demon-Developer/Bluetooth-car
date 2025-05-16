@@ -1,0 +1,75 @@
+const int in1=3;
+const int in2=4;
+const int in3=5;
+const int in4=6;
+const int ledPin1=7;
+const int ledPin2=8;
+const int ledPin3=9;
+const int ledPin4=10;
+const int ledPin5=11;
+const int bluetooth=12;
+int val;
+void setup()
+{ 
+    pinMode( in1,OUTPUT);
+    pinMode(in2,OUTPUT);
+    pinMode(in3,OUTPUT);
+    pinMode(in4,OUTPUT);
+    pinMode(ledPin1,OUTPUT);
+    pinMode(ledPin2,OUTPUT);
+    pinMode(ledPin3,OUTPUT);
+    pinMode(ledPin4,OUTPUT);
+    pinMode(ledPin5,OUTPUT);
+    pinMode(bluetooth,INPUT);
+}
+void loop()
+{
+    val=digitalRead(bluetooth);
+    if(val=='START')
+    {
+      digitalWrite(in4,1);
+      if(val==F)
+      {
+        digitalWrite(in1,1);
+        digitalWrite(in2,0);
+        digitalWrite(in3,1);
+        digitalWrite(ledPin1,1);
+      }
+      digitalWrite(ledPin1,0);
+      else if(val==B)
+      {
+        digitalWrite(in1,0);
+        digitalWrite(in2,1);
+        digitalWrite(in3,0);
+        digitalWrite(ledPin2,1);
+      }
+      digitalWrite(ledPin2,0);
+      else if(val==L)
+      {
+        digitalWrite(in1,0);
+        digitalWrite(in2,0);
+        digitalWrite(in3,1);
+        digitalWrite(ledPin3,1);
+      }
+      digitalWrite(ledPin3,0);
+      else if (val==R)
+      {
+        digitalWrite(in1,0);
+        digitalWrite(in2,0);
+        digitalWrite(in3,1);
+        digitalWrite(in4,0);
+        digitalWrite(ledPin4,1);
+      }
+      digitalWrite(ledPin4,0);
+      else if (val==N)
+      {
+         digitalWrite(in1,0);
+         digitalWrite(in2,0);
+         digitalWrite(in3,0);
+         digitalWrite(in4,0);
+         digitalWrite(ledPin5,1);
+      }
+      digitalWrite(ledPin5,0);
+    }
+    delay(1000);
+ }
