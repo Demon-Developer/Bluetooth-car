@@ -39,9 +39,6 @@ This is a fun DIY project where a small car is controlled using Bluetooth via a 
 - Circuit diagram
 - Optional: 3D print files or chassis design (if any)
 
-📷 Screenshots / Demo
-
-> Add images or a GIF/video link of the car in action
 
 ✅ To Do / Ideas
 
